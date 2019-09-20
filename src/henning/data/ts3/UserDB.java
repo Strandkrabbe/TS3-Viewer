@@ -37,9 +37,9 @@ public class UserDB {
 			data = new ArrayList<Map<String,String>>();
 		if (created)	{
 			Map<String,String> fs = new HashMap<String,String>();
-			fs.put("uid", "OlM8j+fLWWSwMD/lBBHLqTQtOiE=");
-			fs.put("name", "Strandkrabbe_ARM");
-			fs.put("state", "0");
+//			fs.put("uid", "OlM8j+fLWWSwMD/lBBHLqTQtOiE=");
+//			fs.put("name", "Strandkrabbe_ARM");
+//			fs.put("state", "0");
 			data = new ArrayList<Map<String,String>>();
 			data.add(fs);
 		}
