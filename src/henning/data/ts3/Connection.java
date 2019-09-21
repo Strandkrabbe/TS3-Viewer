@@ -36,7 +36,7 @@ public class Connection implements Closeable{
 	}
 	public void switchHandler(int i) throws IOException	{
 		request("clientnotifyunregister");
-		request("clientnotifyregister schandler=" + i + " event=notifyclientids");
+		request("clientnotifyregister schandlerid=" + i + " event=notifyclientids");
 	}
 	public List<Map<String,String>> request(String cmd,Map<String,String> args) throws IOException	{
 		List<Map<String,String>> a = new ArrayList<Map<String,String>>();

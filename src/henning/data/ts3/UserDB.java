@@ -7,6 +7,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
 public class UserDB {
@@ -50,10 +51,22 @@ public class UserDB {
 		created = true;
 	}
 	
+	private void clean(List<Map<String,String>> m)	{
+		ListIterator<Map<String,String>> mi = m.listIterator();
+		while (mi.hasNext())	{
+			Map<String,String> e = mi.next();
+			if (e == null || !e.containsKey("uid") || !e.containsKey("name"))
+				mi.remove();
+			if (!e.containsKey("state"))
+				e.put("state", "0");
+		}
+	}
+	
 	public void save()	{
 		if (temp)
 			return;
 		try {
+			this.clean(data);
 			Files.write(dbFile.toPath(), StringAnalystic.mapToString(data).getBytes(), StandardOpenOption.WRITE);
 		} catch (IOException e) {
 			Log.error("Unexcpected error while writing to userdb");
@@ -72,7 +85,8 @@ public class UserDB {
 	}
 	public boolean contains(String uid)	{
 		for (Map<String,String> m : data)	{
-			if (m.get("uid").equals(uid))
+			String uids = m.get("uid");
+			if (uids != null && uids.equals(uid))
 				return true;
 		}
 		return false;
