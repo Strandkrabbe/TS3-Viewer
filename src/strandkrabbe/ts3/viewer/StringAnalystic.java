@@ -15,7 +15,7 @@
  *
  */
 
-package henning.data.ts3;
+package strandkrabbe.ts3.viewer;
 
 import java.util.*;
 

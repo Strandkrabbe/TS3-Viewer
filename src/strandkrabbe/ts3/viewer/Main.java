@@ -1,4 +1,4 @@
-package henning.data.ts3;
+package strandkrabbe.ts3.viewer;
 
 import java.io.File;
 import java.io.FileInputStream;
