@@ -4,6 +4,10 @@ This tool enables you to see hidden/invisible clients on teamspeak servers in un
 !!You have to see a client once before it can be found by the tool!!
 This is because the clients uid has to be saved (by the tool) in the user db first.
 
+# Build
+Precompiled Versions can be found in the releases.
+Or you can directly build from the source dependencies are not required.
+
 # Usage
 First you have to install the client query plugin in your teamspeak client.
 On first startup the tool creates a configuration file _conf.properties_.
