@@ -18,4 +18,4 @@ After this you can start the tool again after you connected to a teamspeak serve
 This program may not work perfectly but in my test it did most of the time.
 iF you run into an error or see weird user names please try delete the user.db
 
-**Important: the porgram refreshes automatically every 45secs this delay is because of the flood limitations of teamspeak servers. If you get kicked by a server make sure there are not to many entrys in your user db and if you are joining on a big server make sure to set learn to 0 in your config. Be aware that in this case the tool will not add new clients to its database and you will only see tha once you already added.**
+**Important: the porgram refreshes automatically every 45secs this delay is because of the flood limitations of teamspeak servers. If you get kicked by a server make sure there are not to many entrys in your user db and if you are joining on a big server make sure to set learn to 0 in your config. Be aware that in this case the tool will not add new clients to its database and you will only see the ones you already added.**
