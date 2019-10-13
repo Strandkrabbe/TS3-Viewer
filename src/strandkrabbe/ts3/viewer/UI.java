@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -50,17 +51,18 @@ public class UI extends JFrame {
 		jLabel10 = new javax.swing.JLabel();
 		jPanel1 = new javax.swing.JPanel();
 		jPanel2 = new javax.swing.JPanel();
-		jScrollPane1 = new javax.swing.JScrollPane();
-		output_known = new javax.swing.JTextArea();
+		jScrollPane3 = new javax.swing.JScrollPane();
+		panel_known = new javax.swing.JPanel();
 		jPanel3 = new javax.swing.JPanel();
-		jScrollPane2 = new javax.swing.JScrollPane();
-		output_online = new javax.swing.JTextArea();
+		jScrollPane4 = new javax.swing.JScrollPane();
+		panel_online = new javax.swing.JPanel();
 		jLabel3 = new javax.swing.JLabel();
 		value_msg = new javax.swing.JLabel();
 
 		setBackground(new java.awt.Color(255, 255, 255));
 //		setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255), 2));
-		setMinimumSize(new java.awt.Dimension(800, 500));
+		setMinimumSize(new java.awt.Dimension(900, 500));
+		setPreferredSize(new java.awt.Dimension(900, 500));
 
 		jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 		jLabel1.setForeground(new java.awt.Color(250, 0, 0));
@@ -104,51 +106,44 @@ public class UI extends JFrame {
 
 		jPanel2.setBackground(new java.awt.Color(240, 240, 255));
 
-		jScrollPane1.setBorder(null);
-		jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		jScrollPane3.setBackground(new java.awt.Color(255, 255, 255));
+		jScrollPane3.setForeground(new java.awt.Color(20, 20, 255));
+		jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-		output_known.setEditable(false);
-		output_known.setColumns(20);
-		output_known.setForeground(new java.awt.Color(0, 0, 255));
-		output_known.setRows(5);
-		output_known.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 250)));
-		jScrollPane1.setViewportView(output_known);
+		panel_known.setBackground(new java.awt.Color(255, 255, 255));
+		panel_known.setLayout(new javax.swing.BoxLayout(panel_known, javax.swing.BoxLayout.Y_AXIS));
+		jScrollPane3.setViewportView(panel_known);
 
 		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 		jPanel2.setLayout(jPanel2Layout);
-		jPanel2Layout.setHorizontalGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(jPanel2Layout.createSequentialGroup().addContainerGap()
-						.addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
-						.addContainerGap()));
+		jPanel2Layout.setHorizontalGroup(
+				jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(jPanel2Layout
+						.createSequentialGroup().addContainerGap().addComponent(jScrollPane3).addContainerGap()));
 		jPanel2Layout.setVerticalGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGroup(jPanel2Layout.createSequentialGroup().addContainerGap()
-						.addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+						.addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
 						.addContainerGap()));
 
 		jPanel1.add(jPanel2);
 
 		jPanel3.setBackground(new java.awt.Color(240, 240, 255));
 
-		jScrollPane2.setBorder(null);
-		jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		jScrollPane4.setBackground(new java.awt.Color(255, 255, 255));
+		jScrollPane4.setForeground(new java.awt.Color(20, 20, 255));
+		jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-		output_online.setEditable(false);
-		output_online.setColumns(20);
-		output_online.setForeground(new java.awt.Color(0, 0, 255));
-		output_online.setRows(5);
-		output_online.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 250)));
-		jScrollPane2.setViewportView(output_online);
+		panel_online.setBackground(new java.awt.Color(255, 255, 255));
+		panel_online.setLayout(new javax.swing.BoxLayout(panel_online, javax.swing.BoxLayout.Y_AXIS));
+		jScrollPane4.setViewportView(panel_online);
 
 		javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
 		jPanel3.setLayout(jPanel3Layout);
-		jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(jPanel3Layout.createSequentialGroup().addContainerGap()
-						.addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
-						.addContainerGap()));
-		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(jPanel3Layout.createSequentialGroup().addContainerGap()
-						.addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
-						.addContainerGap()));
+		jPanel3Layout.setHorizontalGroup(
+				jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(jPanel3Layout
+						.createSequentialGroup().addContainerGap().addComponent(jScrollPane4).addContainerGap()));
+		jPanel3Layout.setVerticalGroup(
+				jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(jPanel3Layout
+						.createSequentialGroup().addContainerGap().addComponent(jScrollPane4).addContainerGap()));
 
 		jPanel1.add(jPanel3);
 
@@ -220,27 +215,33 @@ public class UI extends JFrame {
 	private javax.swing.JPanel jPanel1;
 	private javax.swing.JPanel jPanel2;
 	private javax.swing.JPanel jPanel3;
-	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JScrollPane jScrollPane2;
-	private javax.swing.JTextArea output_known;
-	private javax.swing.JTextArea output_online;
+	private javax.swing.JScrollPane jScrollPane3;
+	private javax.swing.JScrollPane jScrollPane4;
+	private javax.swing.JPanel panel_known;
+	private javax.swing.JPanel panel_online;
 	private javax.swing.JLabel value_addr;
 	private javax.swing.JLabel value_msg;
 	private javax.swing.JLabel value_port;
 	private javax.swing.JLabel value_state;
+	// End of variables declaration
 
 	private class ScanResult {
 
 		public final List<String> visibleUIDs;
 		public final List<String> onlineUIDs;
+		public final List<String> onlineCLIDs;
+		public final List<String> visibleCIDs;
 
 		public ScanResult() throws IOException {
 			this.visibleUIDs = new ArrayList<String>();
 			this.onlineUIDs = new ArrayList<>();
+			this.visibleCIDs = new ArrayList<>();
+			this.onlineCLIDs = new ArrayList<>();
 			List<Map<String, String>> clientquery = UI.this.conn.request("clientlist -uid", null);
 			for (Map<String, String> u : clientquery) {
 				String uid = u.get("client_unique_identifier");
 				this.visibleUIDs.add(uid);
+				this.visibleCIDs.add(u.get("cid"));
 				if (UI.this.conf.get("learn").equals("1") && !UI.this.db.contains(uid)) {
 					UI.this.db.add(uid, u.get("client_nickname"), false);
 				}
@@ -251,38 +252,75 @@ public class UI extends JFrame {
 				String res = UI.this.conn.request("clientgetids cluid=" + uid);
 				if (!(res.contains("error id=") && !res.contains("error id=0"))) {
 					onlineUIDs.add(uid);
+					String clid = StringAnalystic.convertMap(res).get(0).get("clid");
+					onlineCLIDs.add(clid);
 				}
 			}
 		}
-		
-		private List<String> knownList = null;
-		private List<String> onlineNames = null;
-		
-		private void compute()	{
+
+		private List<User> knownList = null;
+		private List<User> onlineNames = null;
+
+		private void compute() {
 			this.knownList = new ArrayList<>();
 			this.onlineNames = new ArrayList<>();
-			List<Map<String,String>> all = UI.this.db.getAllUDIs();
-			for (Map<String,String> u : all)	{
+			Map<String, String> channel_names = this.getChannelNames();
+			List<Map<String, String>> all = UI.this.db.getAllUDIs();
+			for (Map<String, String> u : all) {
 				String uid = u.get("uid");
-				if (this.onlineUIDs.contains(uid))	{
+				int onlinei = this.onlineUIDs.indexOf(uid);
+				if (onlinei >= 0) {
 					String name = u.get("name");
-					if (!this.visibleUIDs.contains(uid))
+					User user = new User(name, null, uid, this.onlineCLIDs.get(onlinei));
+					int uidi = this.visibleUIDs.indexOf(uid);
+					if (uidi < 0)
 						name = "*" + name + "*";
-					this.onlineNames.add(name);
-				}	else	{
-					this.knownList.add(u.get("name"));
+					else {
+						String cid = this.visibleCIDs.get(uidi);
+						String cname = channel_names.get(cid);
+						if (cname == null)
+							name += " <?>";
+						else
+							name += " <" + cname + ">";
+						user.setCid(cid);
+					}
+					user.setDisplayName(name);
+					this.onlineNames.add(user);
+				} else {
+					String name = u.get("name");
+					User user = new User(name, name, uid);
+					this.knownList.add(user);
 				}
 			}
 		}
-		
-		public List<String> getKnownNames()	{
-			if (knownList == null || onlineNames == null)	{
+
+		private Map<String, String> getChannelNames() {
+			Map<String, String> names = new HashMap<>();
+			try {
+				List<Map<String, String>> res = UI.this.conn.request("channellist", null);
+				for (Map<String, String> channel : res) {
+					if (channel.get("channel_flag_are_subscribed").equals("1")
+							&& channel.get("total_clients").equals("0"))
+						continue;
+					String cid = channel.get("cid");
+					String name = channel.get("channel_name");
+					names.put(cid, name);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return names;
+		}
+
+		public List<User> getKnownNames() {
+			if (knownList == null || onlineNames == null) {
 				compute();
 			}
 			return this.knownList;
 		}
-		public List<String> getOnlineNames()	{
-			if (knownList == null || onlineNames == null)	{
+
+		public List<User> getOnlineNames() {
+			if (knownList == null || onlineNames == null) {
 				compute();
 			}
 			return this.onlineNames;
@@ -290,7 +328,7 @@ public class UI extends JFrame {
 
 	}
 
-	private void setMessage(String msg)	{
+	public void setMessage(String msg) {
 		if (msg == null)
 			msg = "< = >";
 		this.value_msg.setText(msg);
@@ -299,22 +337,18 @@ public class UI extends JFrame {
 	public void update() {
 		try {
 			ScanResult scan = new ScanResult();
-			List<String> known = scan.getKnownNames();
-			List<String> online = scan.getOnlineNames();
-			StringBuilder knownBuilder = new StringBuilder();
-			for (int C = 0;C < known.size();C++)	{
-				if (C != 0)
-					knownBuilder.append('\n');
-				knownBuilder.append(known.get(C));
+			this.panel_known.removeAll();
+			this.panel_online.removeAll();
+			List<User> kn = scan.getKnownNames();
+			List<User> on = scan.getOnlineNames();
+			for (User u : kn)	{
+				Entry e = new Entry(this, u, conn);
+				this.panel_known.add(e);
 			}
-			StringBuilder onlineBuilder = new StringBuilder();
-			for (int C = 0;C < online.size();C++)	{
-				if (C != 0)
-					onlineBuilder.append('\n');
-				onlineBuilder.append(online.get(C));
+			for (User u : on)	{
+				Entry e = new Entry(this, u, conn);
+				this.panel_online.add(e);
 			}
-			this.output_known.setText(knownBuilder.toString());
-			this.output_online.setText(onlineBuilder.toString());
 			this.value_addr.setText(this.conn.ip);
 			this.value_port.setText(this.conn.port + "");
 			this.value_state.setText("Connected");
@@ -324,28 +358,30 @@ public class UI extends JFrame {
 			this.value_state.setText("Error");
 		}
 	}
-	
+
 	public static final long SLEEP_TIME = 45000;
 	private boolean isActive = true;
-	
-	public void run()	{
+
+	public void run() {
 		this.isActive = true;
-		while (isActive)	{
+		while (isActive) {
 			this.update();
 			try {
 				Thread.sleep(SLEEP_TIME);
-			} catch (InterruptedException e) {}
+			} catch (InterruptedException e) {
+				isActive = false;
+			}
 		}
 	}
 
-	private void addEvents()	{
+	private void addEvents() {
 		this.input_tab.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				try	{
+				try {
 					int hid = Integer.valueOf(input_tab.getText());
 					UI.this.conn.switchHandler(hid);
-				}	catch (NumberFormatException ex)	{
+				} catch (NumberFormatException ex) {
 					UI.this.setMessage("Invalid number");
 				} catch (IOException e1) {
 					UI.this.setMessage("Failed to switch");
@@ -367,5 +403,5 @@ public class UI extends JFrame {
 			}
 		});
 	}
-	
+
 }
