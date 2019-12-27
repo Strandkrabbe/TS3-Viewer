@@ -6,7 +6,7 @@ This is because the clients uid has to be saved (by the tool) in the user db fir
 
 # Build
 Precompiled Versions can be found in the releases.
-Or you can directly build from the source dependencies are not required.
+Or you can directly build from the source required dependencies are available at the releases.
 
 # Usage
 First you have to install the client query plugin in your teamspeak client.
