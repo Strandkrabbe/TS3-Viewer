@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Scanner;
 
+import strandkrabbe.ts3.viewer.ui.UI;
+
 public class Main {
 	
 	private static Connection conn;

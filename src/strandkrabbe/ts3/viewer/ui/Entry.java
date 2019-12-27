@@ -1,4 +1,4 @@
-package strandkrabbe.ts3.viewer;
+package strandkrabbe.ts3.viewer.ui;
 
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
@@ -6,6 +6,10 @@ import java.awt.event.MouseEvent;
 import java.io.IOException;
 
 import javax.swing.JPanel;
+
+import strandkrabbe.ts3.viewer.Connection;
+import strandkrabbe.ts3.viewer.StringAnalystic;
+import strandkrabbe.ts3.viewer.User;
 
 public class Entry extends JPanel {
 

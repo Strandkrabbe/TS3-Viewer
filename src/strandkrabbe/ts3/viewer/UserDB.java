@@ -83,6 +83,15 @@ public class UserDB {
 		data.add(ti);
 		save();
 	}
+	public void remove(String uid)	{
+		ListIterator<Map<String,String>> elements = this.data.listIterator();
+		while (elements.hasNext())	{
+			Map<String,String> el = elements.next();
+			if (el.get("uid").equals(uid))
+				elements.remove();
+		}
+		save();
+	}
 	public boolean contains(String uid)	{
 		for (Map<String,String> m : data)	{
 			String uids = m.get("uid");

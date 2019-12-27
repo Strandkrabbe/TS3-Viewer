@@ -52,7 +52,7 @@ public class Connection implements Closeable{
 		a.get(0).put(" error ","" + (!StringAnalystic.nonerrorString(res)));
 		return a;
 	}
-	synchronized String request(String tw) throws IOException	{
+	public synchronized String request(String tw) throws IOException	{
 		write(tw);
 		return readAll();
 	}
